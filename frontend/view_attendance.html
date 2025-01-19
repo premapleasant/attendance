@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Attendance</title>
+    <link rel="stylesheet" href="./css/view_attendance.css">
+</head>
+<body>
+    <div class="container">
+        <h1>View Attendance</h1>
+
+        <!-- Filter Section -->
+        <div class="filter-section">
+            <label for="attendanceDate">Date:</label>
+            <input type="date" id="attendanceDate" required>
+
+            <label for="course">Course:</label>
+            <select id="course" required>
+                <option value="">Select Course</option>
+                <option value="bsc_cs">BSC_CS</option>
+                <option value="bba">BBA</option>
+                <option value="bcom">BCOM</option>
+                <option value="bca">BCA</option>
+            </select>
+
+            <label for="year">Year:</label>
+            <select id="year" required>
+                <option value="">Select Year</option>
+                <option value="1st year">1st year</option>
+                <option value="2nd year">2nd year</option>
+                <option value="3rd year">3rd year</option>
+            </select>
+
+            <label for="semester">Semester:</label>
+            <select id="semester" required>
+                <option value="">Select Semester</option>
+                <option value="semester 1">Semester 1</option>
+                <option value="semester 2">Semester 2</option>
+                <option value="semester 3">Semester 3</option>
+                <option value="semester 4">Semester 4</option>
+                <option value="semester 5">Semester 5</option>
+                <option value="semester 6">Semester 6</option>
+            </select>
+
+            <button id="filterAttendanceButton">Filter Attendance</button>
+        </div>
+
+        <!-- Filtered Data Indicator -->
+        <div id="filteredDataIndicator" class="hidden">
+            <span>Filtered data has been applied</span>
+        </div>
+
+        <!-- Attendance Records Table -->
+        <div class="attendance-table">
+            <table id="attendance-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Course</th>
+                        <th>Year</th>
+                        <th>Semester</th>
+                        <th>Student Name</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dynamic rows will be inserted here via JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Actions -->
+        <div class="actions">
+            <button id="downloadBtn">Download CSV</button>
+            <button id="printBtn">Print</button>
+        </div>
+
+        <!-- Loading Indicator -->
+        <div id="loadingIndicator" class="loading hidden">Loading...</div>
+    </div>
+
+    <script src="./js/view_attendance.js"></script>
+</body>
+</html>

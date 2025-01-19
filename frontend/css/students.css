@@ -1,0 +1,155 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Container Styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Title Styling */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Filter Section */
+.filter-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.filter-container select, .filter-container button {
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Form Section */
+.form-container {
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container input, .form-container select, .form-container button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.form-container button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #45a049;
+}
+
+/* Table Section */
+.table-container {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+#students-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#students-table th, #students-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#students-table th {
+    background-color: #f2f2f2;
+}
+
+#students-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Action Buttons in Table */
+#students-table td button {
+    background-color: #f4b400; /* Yellow for Action */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+#students-table td button:hover {
+    background-color: #f2a900;
+}
+
+.delete-btn {
+    background-color: #e2190a; /* Red for Delete */
+}
+
+.delete-btn:hover {
+    background-color: #e53935;
+}
+
+/* Mobile-Friendly Design */
+@media (max-width: 768px) {
+    .filter-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filter-container select, .filter-container button {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .form-container {
+        padding: 15px;
+    }
+
+    #students-table {
+        font-size: 14px;
+    }
+
+    #students-table th, #students-table td {
+        padding: 10px;
+    }
+
+    /* Full Width for Buttons on Mobile */
+    #students-table td button {
+        width: 100%; /* Make buttons take full width on mobile */
+        font-size: 16px;
+        padding: 12px;
+        margin-bottom: 10px;
+    }
+
+    .delete-btn {
+        margin-top: 5px; /* Space between buttons */
+    }
+}

@@ -1,0 +1,225 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), 
+              url('./College_front.jpg') no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+}
+
+.about {
+  font-size: 1.2rem;
+  float: left;
+  margin-left: 0;
+}
+
+.aboutpage {
+  color: #0066ff;
+  text-decoration: underline; /* Make link underlined */
+}
+
+.aboutpage:hover {
+  color: #f39c12; /* Change color on hover */
+}
+
+/* Header Section */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+header .header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  padding: 0 20px;
+}
+
+header .temple-logo, header .college-logo {
+  width: 100px; /* Reduced width for better responsiveness */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 140px; /* Max height to ensure it's not cut off */
+  object-fit: contain; /* Ensure images are fully visible */
+  border-radius: 8px; /* Optional: rounded corners */
+}
+
+/* College Name */
+header .college-name {
+  font-size: 2.5rem; /* College name size */
+  margin: 0;
+  color: #f39c12;
+  /* College name in gold color for emphasis */
+}
+
+/* Main Section */
+main {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.content {
+  text-align: center;
+  position: relative;
+}
+
+.welcome-message {
+  font-size: 2rem;
+  margin: 20px 0; /* Spacing above the login button */
+  font-weight: 500; /* Added a bit of weight for emphasis */
+  color: #fff; /* White text for the welcome message */
+}
+
+.arrow {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: arrowAnimation 2s forwards;
+  animation-delay: 0.5s; /* Slight delay before arrow starts moving */
+}
+
+/* Login Button */
+.login-btn {
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  background: linear-gradient(90deg, #007BFF, #0056b3);
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  background: #004080;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
+}
+
+/* Footer Section */
+footer {
+  text-align: center;
+  padding: 15px; /* Reduced padding */
+  background: #232323;
+  font-size: 0.9rem; /* Reduced font size */
+  color: #dcdcdc;
+  border-top: 2px solid #444;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-heading {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #f39c12; /* Footer heading color */
+}
+
+.footer-emails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.email {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.email:hover {
+  color: #f39c12;
+  text-decoration: underline; /* Underlined on hover */
+}
+
+/* Arrow Animation */
+@keyframes arrowAnimation {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(20px);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Mobile Optimization */
+@media screen and (max-width: 600px) {
+  /* College Name */
+  header .college-name {
+    font-size: 1.7rem; /* Increased size for better visibility */
+    margin-top: 20px; /* Added margin to move it closer to the welcome message */
+    text-align: center; /* Center the college name */
+  }
+
+  /* Welcome Message */
+  .welcome-message {
+    font-size: 1.6rem; /* Increased size for better visibility */
+    margin-top: 10px; /* Adjusted margin to provide space between the name and message */
+    font-weight: 500;
+    color: #fff;
+  }
+
+  /* Arrow Animation */
+  .arrow {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: arrowAnimation 2s forwards;
+    animation-delay: 0.5s;
+  }
+
+  /* Images for mobile */
+  header .header-content {
+    display: flex;
+    justify-content: center; /* Center the images */
+    width: 100%;
+    gap: 10px;
+    margin-top: 20px; /* Provide space between the images and text */
+  }
+
+  header .temple-logo, header .college-logo {
+    width: 40%; /* Maintain appropriate image size */
+    height: auto;
+    border-radius: 8px;
+    gap: 20px;
+  }
+
+  .footer-heading {
+    font-size: 1.4rem; /* Increased footer heading size */
+  }
+
+  .footer-emails {
+    gap: 8px;
+  }
+
+  .email {
+    font-size: 1.2rem; /* Increased font size for footer emails */
+  }
+}

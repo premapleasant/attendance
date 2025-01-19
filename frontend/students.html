@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management</title>
+    <link rel="stylesheet" href="./css/students.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Management</h1>
+
+        <!-- Filter Section -->
+        <div class="filter-container">
+            <select id="course" class="filter-select">
+                <option value="">Select Course</option>
+                <option value="bsc_cs">BSC CS</option>
+                <option value="bcom">BCOM</option>
+                <option value="bba">BBA</option>
+                <option value="bca">BCA</option>
+            </select>
+
+            <select id="year" class="filter-select">
+                <option value="">Select Year</option>
+                <option value="1st year">1st Year</option>
+                <option value="2nd year">2nd Year</option>
+                <option value="3rd year">3rd Year</option>
+            </select>
+
+            <select id="semester" class="filter-select">
+                <option value="">Select Semester</option>
+                <option value="semester 1">Semester 1</option>
+                <option value="semester 2">Semester 2</option>
+                <option value="semester 3">Semester 3</option>
+                <option value="semester 4">Semester 4</option>
+                <option value="semester 5">Semester 5</option>
+                <option value="semester 6">Semester 6</option>
+            </select>
+
+            <button id="filter-btn">Filter</button>
+        </div>
+
+        <!-- Add / Update Student Form -->
+        <div class="form-container">
+            <form id="student-form">
+                <input type="hidden" id="student-id">
+                <label for="name">Name:</label>
+                <input type="text" id="student-name" required>
+
+                <label for="course">Course:</label>
+                <select id="course-input">
+                    <option value="bsc_cs">BSC CS</option>
+                    <option value="bcom">BCOM</option>
+                    <option value="bba">BBA</option>
+                    <option value="bca">BCA</option>
+                </select>
+
+                <label for="year">Year:</label>
+                <select id="year-input">
+                    <option value="1st year">1st Year</option>
+                    <option value="2nd year">2nd Year</option>
+                    <option value="3rd year">3rd Year</option>
+                </select>
+
+                <label for="semester">Semester:</label>
+                <select id="semester-input">
+                    <option value="semester 1">Semester 1</option>
+                    <option value="semester 2">Semester 2</option>
+                    <option value="semester 3">Semester 3</option>
+                    <option value="semester 4">Semester 4</option>
+                    <option value="semester 5">Semester 5</option>
+                    <option value="semester 6">Semester 6</option>
+                </select>
+
+                <button type="submit" id="add-update-btn">Add / Update Student</button>
+            </form>
+        </div>
+
+        <!-- Students Table -->
+        <div class="table-container">
+            <table id="students-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Course</th>
+                        <th>Year</th>
+                        <th>Semester</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="student-table-body">
+                    <!-- Dynamic rows will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="./js/students.js"></script>
+</body>
+</html>

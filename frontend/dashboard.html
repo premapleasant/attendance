@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Dashboard</title>
+    <link rel="stylesheet" href="./css/dashboard.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <!-- Hamburger Menu (left) -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Logout Button (right) -->
+        <button id="logoutButton" class="logout-btn">Logout</button>
+    </div>
+
+    <!-- Menu Links (hidden by default) -->
+    <ul class="menu-links" id="menuLinks">
+        <li><a href="students.html">Student Management</a></li>
+        <li><a href="view_attendance.html">View Attendance</a></li>
+        <li><a href="view_summary.html">View Summary</a></li>
+    </ul>
+
+    <!-- Dashboard Content -->
+    <div class="container">
+        <div class="date-section">
+            <label for="attendanceDate">Date:</label>
+            <input type="date" id="attendanceDate" >
+        </div>
+
+        <!-- Course, Year, and Semester Selection -->
+        <div class="select-section">
+            <label for="course">Course:</label>
+            <select id="course" name="course">
+                <option value="bsc_cs">BSC_CS</option>
+                <option value="bba">BBA</option>
+                <option value="bcom">BCOM</option>
+                <option value="bca">BCA</option>
+            </select>
+
+            <label for="year">Year:</label>
+            <select id="year" name="year">
+                <option value="1st Year">1st Year</option>
+                <option value="2nd Year">2nd Year</option>
+                <option value="3rd Year">3rd Year</option>
+            </select>
+
+            <label for="semester">Semester:</label>
+            <select id="semester" name="semester">
+                <option value="Semester 1">Semester 1</option>
+                <option value="Semester 2">Semester 2</option>
+                <option value="Semester 3">Semester 3</option>
+                <option value="Semester 4">Semester 4</option>
+                <option value="Semester 5">Semester 5</option>
+                <option value="Semester 6">Semester 6</option>
+            </select>
+
+            <button id="showStudentsButton">View Students</button>
+        </div>
+        <div id="loadingIndicator" style="display: none; text-align: center; margin: 10px 0;">
+            <p>Loading...</p>
+        </div>
+        
+
+        <!-- Student Attendance List -->
+        <div class="student-list">
+            <div class="table-responsive">
+                <table class="student-table">
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Name</th>
+                            <th>Attendance</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentTableBody">
+                        <!-- Dynamic Student Rows will be inserted here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Submit Attendance -->
+        <button type="submit" id="submitAttendanceButton">Submit Attendance</button>
+    </div>
+
+    <script src="./js/dashboard.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const logoutBtn = document.getElementById('logoutButton');
+            
+            logoutBtn.addEventListener('click', function() {
+                // Remove the token from localStorage
+                localStorage.removeItem('auth_token');
+        
+                // Redirect to login page
+                window.location.href = "login.html";
+            });
+        });
+        </script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body background and overall setup */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #2a2a2a, #1a1a1a);  /* Dark gradient background */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+/* Loading Page */
+.loading-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none; /* Hidden by default */
+}
+
+.spinner {
+    border: 4px solid transparent;
+    border-top: 4px solid #007bff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Centered container for the login card */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Login card styles */
+.login-card {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    width: 380px;
+    text-align: center;
+}
+
+/* Header for login card (includes logo) */
+.login-header {
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+/* Heading for login form */
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Input field styles */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+    color: #ccc;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    border: 2px solid #444;
+    border-radius: 8px;
+    margin-top: 5px;
+}
+
+input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Button styles */
+.login-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Error message styles */
+.error-message {
+    color: red;
+    display: none;  /* Hide error initially */
+    margin-top: 15px;  /* Space above the error message */
+    font-size: 14px;
+    margin-bottom: 10px;  /* Space below the error message */
+}
+
+/* Space between the login button and the Change Password link */
+.login-btn {
+    margin-bottom: 20px;  /* Add margin below the login button to create space */
+}
+
+/* Style for the Change Password link */
+#change_password {
+    color: #8a970e;  /* Set a different color for the link (green) */
+    text-decoration: underline;  /* Add underline to the text */
+    font-weight: bold;  /* Make it bold to make it stand out */
+    cursor: pointer;  /* Add pointer cursor to indicate it's clickable */
+    transition: color 0.3s, text-decoration-color 0.3s;
+    margin-top: 10px;  /* Space above the link */
+}
+
+/* Change color on hover */
+#change_password:hover {
+    color: #218838;  /* Darker green on hover */
+    text-decoration-color: #218838;  /* Underline color change on hover */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .login-card {
+        width: 90%;
+        padding: 25px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    .input-group label {
+        font-size: 14px;
+    }
+    .login-btn {
+        font-size: 16px;
+        padding: 12px;
+    }
+}

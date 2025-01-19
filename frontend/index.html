@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance Management</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="header-content">
+      <!-- Temple Image -->
+      <img src="./images/temple-picture.jpg" alt="Temple Image" class="temple-logo">
+
+      <!-- College Logo -->
+      <img src="./images/aaasc-logo.jpg" alt="College Logo" class="college-logo">
+    </div>
+
+    <!-- College Name -->
+    <h1 class="college-name">Arulmigu Arthanareeswarar Arts And Science College</h1>
+  </header>
+
+  <!-- Main Section -->
+  <main>
+    <div class="content">
+      <!-- Welcome Message -->
+      <p class="welcome-message">Welcome to our College</p>
+      
+      <!-- Arrow to Login Button -->
+      <div class="arrow">&#8595;</div>
+
+      <!-- Login Button -->
+      <button class="login-btn">Faculty Login</button>
+    </div>
+  </main>
+
+  <p class="about">Click here to know about login process<br>
+    <a href="about.html" class="aboutpage">click here</a></p>
+    <br>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-container">
+      <p class="footer-heading">Contact</p>
+      <div class="footer-emails">
+        <a href="mailto:aadhiprince007@gmail.com" class="email">aadhiprince007@gmail.com</a>
+        <a href="mailto:premapleasant@gmail.com" class="email">premapleasant@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  // Add click animation and redirection to the login button
+  document.querySelector('.login-btn').addEventListener('click', function () {
+      this.classList.add('clicked');
+      
+      // Wait for the button animation before redirecting
+      setTimeout(() => {
+        this.classList.remove('clicked');
+        // Redirect to the login page
+        window.location.href = 'login.html';
+      }, 300); // Adjust the delay to match the animation timing
+  });
+</script>
+</body>
+</html>
