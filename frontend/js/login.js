@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
         loadingPage.style.display = "flex";
 
         // Send request to the backend for verification
-        fetch('http://localhost:3000/login', {  // Assuming backend route is /login
+        fetch('https://attendance-prema.onrender.com/login', {  // Assuming backend route is /login
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

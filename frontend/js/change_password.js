@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         // Send request to update the password
-        fetch('http://localhost:3000/update_department_password', {
+        fetch('https://attendance-prema.onrender.com/update_department_password', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     downloadDbButton.addEventListener('click', function () {
         // Send request to download the database
-        fetch('http://localhost:3000/download_db', {
+        fetch('https://attendance-prema.onrender.com/download_db', {
             method: 'GET'
         })
         .then(response => {

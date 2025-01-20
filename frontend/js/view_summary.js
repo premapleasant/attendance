@@ -77,7 +77,7 @@ function filterSummary() {
     }
 
     // Fetch summary data from the backend
-    fetch(`http://localhost:3000/view_summary?course=${course}&year=${year}&semester=${semester}&start_date=${fromDate}&end_date=${toDate}`, {
+    fetch(`https://attendance-prema.onrender.com/view_summary?course=${course}&year=${year}&semester=${semester}&start_date=${fromDate}&end_date=${toDate}`, {
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${token}`,  // Add token to Authorization header

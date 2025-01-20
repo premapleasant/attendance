@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (loadingSpinner) loadingSpinner.style.display = "flex";
 
             // Send the credentials to the backend
-            fetch('http://localhost:3000/admin_login', {
+            fetch('https://attendance-prema.onrender.com/admin_login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
