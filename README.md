@@ -63,10 +63,10 @@ A **mobile-friendly**, full-stack web application that empowers staff to manage 
 - **Authentication:** JWT (JSON Web Tokens)  
 - **Deployment:**  
   - Backend on [Render](#)  
-  - Frontend on [Netlify](#)  
+  - Frontend on [Netlify](https://aaasc-prema.netlify.app/)  
 
 ---
 
 ## 🌐 Live Demo
 
-[Live Link]()
+[Live Link](https://aaasc-prema.netlify.app/)
