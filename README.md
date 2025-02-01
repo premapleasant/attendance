@@ -31,4 +31,4 @@ A mobile-friendly, full-stack web application that allows staff to manage studen
 - **Deployment:** Render (Backend), Netlify (Frontend) *(If deployed)*  
 
 ## Live Demo  
-🔗 [Frontend Live Link](#)
+🔗 [Frontend Live Link](https://aaasc-prema.netlify.app/)
