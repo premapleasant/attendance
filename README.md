@@ -1,34 +1,72 @@
-# Attendance Management System  
+# Attendance Management System
 
-A mobile-friendly, full-stack web application that allows staff to manage student attendance efficiently with authentication, real-time tracking, and reporting features.  
+A **mobile-friendly**, full-stack web application that empowers staff to manage student attendance with secure authentication, real-time tracking, and comprehensive reporting.
 
-## Features  
-✔️ **Secure Login:** Staff authentication using JWT  
-✔️ **Dashboard:** Displays attendance statistics and allows attendance marking  
-✔️ **Mark Attendance:** Select students, mark their attendance, and submit directly from the dashboard  
-✔️ **View Attendance:** Check attendance records with filtering options  
-✔️ **Attendance Summary:** Generate and download real-time attendance reports  
-✔️ **Student Management:** Add, update, and remove student records  
-✔️ **Download & Print Reports:** Export attendance data for documentation  
-✔️ **Date Filtering:** View and filter attendance for specific date ranges  
-✔️ **Mobile-Friendly Design:** Fully responsive UI for seamless use on all devices  
+---
 
-## Application Flow  
-1️⃣ **Landing Page:** Home screen with a button to access the login page  
-2️⃣ **Login Page:** Staff authentication (only staff can log in)  
-3️⃣ **Dashboard Page:**  
-   - Displays an overview of attendance and student details  
-   - **Mark Attendance:** Select students and submit attendance from here  
-4️⃣ **View Attendance Page:** Filter and check attendance records  
-5️⃣ **View Summary Page:** Generate and download printable attendance reports  
-6️⃣ **Student Management Page:** Manage student details (Add/Edit/Delete)  
+## 🚀 Features
 
-## Technologies Used  
+- **Secure Login:**  
+  Staff authentication using JWT to ensure only authorized access.
+
+- **Dashboard:**  
+  A centralized view that displays attendance statistics and student details, and allows direct attendance marking.
+
+- **Mark Attendance:**  
+  Select students, mark their attendance, and submit—all from a single, streamlined dashboard.
+
+- **View Attendance:**  
+  Filter and view detailed attendance records.
+
+- **Attendance Summary:**  
+  Generate, download, and print real-time attendance reports for documentation and analysis.
+
+- **Student Management:**  
+  Add, update, and remove student records effortlessly.
+
+- **Date Filtering:**  
+  Easily view attendance data for specific date ranges.
+
+- **Mobile-Friendly Design:**  
+  Fully responsive UI optimized for seamless use on all devices.
+
+---
+
+## 📋 Application Flow
+
+1. **Landing Page:**  
+   - Home screen featuring a button to navigate to the login page.
+
+2. **Login Page:**  
+   - Staff authentication page (only authorized staff can log in).
+
+3. **Dashboard Page:**  
+   - Displays an overview of attendance and student details.  
+   - **Mark Attendance:** Directly mark attendance from this page.
+
+4. **View Attendance Page:**  
+   - Filter and review attendance records.
+
+5. **View Summary Page:**  
+   - Generate, download, and print attendance reports.
+
+6. **Student Management Page:**  
+   - Manage student details (Add, Edit, Delete).
+
+---
+
+## 🛠 Technologies Used
+
 - **Frontend:** HTML, CSS, JavaScript  
 - **Backend:** Node.js, Express.js  
 - **Database:** MySQL  
 - **Authentication:** JWT (JSON Web Tokens)  
-- **Deployment:** Render (Backend), Netlify (Frontend)
+- **Deployment:**  
+  - Backend on [Render](#)  
+  - Frontend on [Netlify](#)  
 
-## Live Demo  
-🔗 [Frontend Live Link](https://aaasc-prema.netlify.app/)
+---
+
+## 🌐 Live Demo
+
+[Live Link]()
