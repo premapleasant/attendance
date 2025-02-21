@@ -8,7 +8,10 @@ async function fetchAttendanceData() {
         const course = document.getElementById('course').value.trim();
         const year = document.getElementById('year').value.trim();
         const semester = document.getElementById('semester').value.trim();
-
+          if(!date || !course || !year || !semester) {
+            console.warn("All filter fields are required before fetching data.");
+            
+          }
         // Debug: log the selected filter values
         console.log("Fetching attendance data...");
         console.log(`Date: ${date}, Course: ${course}, Year: ${year}, Semester: ${semester}`);
@@ -29,7 +32,7 @@ async function fetchAttendanceData() {
         }
 
         // Fetch data from backend with token included in the headers
-        const response = await fetch(`https://attendance-prema.onrender.com/view_attendance?date=${date}&course=${course}&year=${year}&semester=${semester}`, {
+        const response = await fetch(`https://aaasc-attendance.onrender.com/view_attendance?date=${date}&course=${course}&year=${year}&semester=${semester}&nocache=${new Date().getTime()}`, {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}` // Include token in Authorization header
@@ -145,10 +148,10 @@ function populateTable(data) {
             const row = document.createElement("tr");
 
             // Add cells for each column
-            row.appendChild(createCell(item.date.split('T')[0])); // Extract date only
-            row.appendChild(createCell(item.course));
-            row.appendChild(createCell(item.year));
-            row.appendChild(createCell(item.semester));
+            // row.appendChild(createCell(item.date.split('T')[0])); // Extract date only
+            // row.appendChild(createCell(item.course));
+            // row.appendChild(createCell(item.year));
+            // row.appendChild(createCell(item.semester));
             row.appendChild(createCell(item.name));
             const statusCell = createCell(item.status);
 
@@ -157,8 +160,8 @@ function populateTable(data) {
                 statusCell.classList.add("status-present");
             } else if (item.status.toLowerCase() === "absent") {
                 statusCell.classList.add("status-absent");
-            } else if (item.status.toLowerCase() === "late") {
-                statusCell.classList.add("status-late");
+            } else if (item.status.toLowerCase() === "on_duty") {
+                statusCell.classList.add("status-on_duty");
             }
 
             row.appendChild(statusCell);
@@ -207,7 +210,7 @@ function downloadCSV(data) {
         item.course,
         item.year,
         item.semester,
-        item.student_name,
+        item.name,
         item.status
     ]);
 

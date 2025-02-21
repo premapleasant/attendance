@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-    max-width: 100%;
+    max-width: 80%;
     margin: 0 auto;
     padding: 20px;
     background-color: #fff;
@@ -29,23 +29,26 @@ h1 {
 .filter-section {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px; /* Decreased the gap */
-    margin-bottom: 20px;
+    gap: 7px; /* Decreased the gap */
+    margin-bottom: 10px;
 }
 
 .filter-section label {
     font-weight: bold;
     margin-right: 10px;
+
 }
 
 .filter-section input,
 .filter-section select,
 .filter-section button {
-    padding: 8px 12px;
-    margin-bottom: 10px;
+    padding: 6px 10px;
+    margin-bottom: 12px;
     font-size: 16px;
     border-radius: 5px;
     border: 1px solid #ddd;
+    margin-top: -9px;
+    margin-right: 5px;
 }
 
 button {
@@ -111,7 +114,7 @@ td.status-absent {
     font-weight: bold;
 }
 
-td.status-late {
+td.status-on_duty {
     color: orange;
     font-weight: bold;
 }
@@ -148,6 +151,9 @@ td.status-late {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .container{
+        width: 100%;
+    }
     .filter-section {
         flex-direction: column;
         align-items: stretch;

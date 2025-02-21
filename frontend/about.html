@@ -4,51 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Attendance Project</title>
-   <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="./css/about.css">
 </head>
 <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="admin.html">Admin</a></li>
+        </ul>
+    </nav>
+
     <div class="container">
         <h1>About Attendance Management System</h1>
-        <p>Our Attendance Management System simplifies the process of tracking and managing attendance. Follow the steps below to learn more:</p>
+        <p>Our Attendance Management System simplifies the process of tracking and managing attendance, ensuring seamless integration with your institution's daily activities. This system is designed for both efficiency and security, making it easier for faculty to manage student attendance.</p>
+        
+        <h2>Why Use This System?</h2>
+        <p>This system helps educational institutions save time by automating attendance tracking, reducing errors, and providing easy-to-use tools for managing student data. With a secure login, intuitive interface, and essential features like data export and student management, it’s the perfect solution for both small and large institutions.</p>
 
         <!-- Steps Section -->
         <div class="step">
             <h2>Step 1: Secure Login</h2>
-            <p>Users can log in using their secure credentials to access the system.</p>
-            <img src="./images/homepage.png" alt="Login Page Screenshot">
-            <img src="./images/login.png" alt="Login Page Screenshot">
-
+            <p>Users can log in using their secure credentials to access the system. Each department and admin has restricted access, ensuring confidentiality and proper control over user permissions.</p>
+            <img src="./images/Index Page.png" alt="Home Page Screenshot">
+            <img src="./images/Login Page.png" alt="Login Page Screenshot">
         </div>
         
         <div class="step">
             <h2>Step 2: Course and Student Selection</h2>
-            <p>Select the course, year, and semester to filter the student list.</p>
-            <img src="./images/dashboard.png" alt="Course Selection Screenshot">
+            <p>Select the course, year, and semester to filter the student list. This ensures that the system adapts to different courses and departments effortlessly.</p>
+            <img src="./images/dashboard edit.png" alt="Course Selection Screenshot">
         </div>
 
         <div class="step">
             <h2>Step 3: Mark Attendance</h2>
-            <p>Mark students as Present, Absent, or On-Duty effortlessly.And submit the attendance.</p>
-            <img src="./images/markattendance.jpeg" alt="Mark Attendance Screenshot">
+            <p>Mark students as Present, Absent, or On-Duty effortlessly and submit the attendance in just a few clicks. This feature saves time and ensures accuracy in attendance records.</p>
+            <img src="./images/dashboard mark.png" alt="Mark Attendance Screenshot">
         </div>
 
         <div class="step">
             <h2>Step 4: View Attendance History</h2>
-            <p>View attendance records for previous days to monitor progress.</p>
-            <img src="./images/viewpage.png" alt="Attendance History Screenshot">
+            <p>View attendance records for previous days to monitor progress and keep track of student attendance patterns.</p>
+            <img src="./images/view attendance page.png" alt="Attendance History Screenshot">
         </div>
 
         <div class="step">
             <h2>Step 5: Download Attendance Records</h2>
-            <p>Export attendance data for offline use or reporting purposes.</p>
-            <img src="./images/download.png" alt="Download Attendance Screenshot">
+            <p>Export attendance data for offline use or reporting purposes. This feature makes it easy to generate reports and share them with relevant stakeholders.</p>
+            <img src="./images/download option.png" alt="Download Attendance Screenshot">
         </div>
 
         <div class="step">
             <h2>Step 6: Manage Student Details</h2>
-            <p>Add or update student information to keep records accurate and up-to-date.</p>
-            <img src="./images/update.png" alt="Student Management Screenshot">
-            <img src="./images/updatepage.png" alt="Student Management Screenshot">
+            <p>Add or update student information to keep records accurate and up-to-date. The system ensures that student data remains consistent and easy to manage.</p>
+            <img src="./images/Student management page.png" alt="Student Management Screenshot">
+            <img src="./images/delete student.png" alt="Student Management Screenshot">
+        </div>
+
+        <!-- New Section: Technical Overview -->
+        <div class="step">
+            <h2>Technical Overview</h2>
+            <p>This system is built using a combination of technologies that ensure robustness and scalability. The frontend is developed with HTML, CSS, and JavaScript, while the backend is powered by Node.js and Express.js. We use MySQL for the database, providing a reliable solution for managing and storing attendance data. Hosting is done on Render and Netlify, ensuring that the system remains accessible and reliable.</p>
+        </div>
+
+        <!-- Additional Section: Key Features -->
+        <div class="step">
+            <h2>Key Features</h2>
+            <ul>
+                <li><strong>Secure Login:</strong> Department-level login with hashed passwords to ensure secure access.</li>
+                <li><strong>Attendance Marking:</strong> Mark attendance with a simple interface for efficiency.</li>
+                <li><strong>Data Export:</strong> Download attendance records for offline use and reporting.</li>
+                <li><strong>Student Management:</strong> Add, update, or delete student records as needed.</li>
+                <li><strong>Responsive Design:</strong> Optimized for both desktop and mobile devices, making it easy to use anywhere.</li>
+            </ul>
         </div>
     </div>
 </body>

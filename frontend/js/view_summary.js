@@ -77,7 +77,7 @@ function filterSummary() {
     }
 
     // Fetch summary data from the backend
-    fetch(`https://attendance-prema.onrender.com/view_summary?course=${course}&year=${year}&semester=${semester}&start_date=${fromDate}&end_date=${toDate}`, {
+    fetch(`https://aaasc-attendance.onrender.com/view_summary?course=${course}&year=${year}&semester=${semester}&start_date=${fromDate}&end_date=${toDate}`, {
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${token}`,  // Add token to Authorization header
@@ -179,7 +179,7 @@ function downloadCSV(data) {
         item.name,
         item.year,
         item.semester,
-        item.date,
+        item.start_date && item.end_date ? `${item.start_date} - ${item.end_date}` : "N/A",
         item.present_days,
         item.absent_days,
         item.on_duty_days,

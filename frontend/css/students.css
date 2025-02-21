@@ -14,7 +14,7 @@ body {
 
 /* Container Styling */
 .container {
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -94,7 +94,7 @@ h1 {
 
 /* Action Buttons in Table */
 #students-table td button {
-    background-color: #f4b400; /* Yellow for Action */
+    background-color: #2244b4; /* Yellow for Action */
     color: white;
     border: none;
     padding: 5px 10px;

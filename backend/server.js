@@ -29,6 +29,9 @@ const db = mysql.createConnection({
   user: process.env.MYSQL_USER,
   password: process.env.MYSQL_PASSWORD,
   database: process.env.MYSQL_DATABASE,
+  port: process.env.MYSQL_PORT,
+  ssl: { rejectUnauthorized: false}, // Aiven requires SSL
+  connectTimeout: 10000,
 });
 db.connect((err) => {
   if (err) {
@@ -72,23 +75,32 @@ function validateToken(req, res) {
   }
   return true;
 }
+app.get('/api/health-check', (req, res) => {
+  res.status(200).json({ message: 'Server is running and warmed up!' });
+});
 // Login endpoint
-app.post("/login", (req, res) => {
+app.post("/login",async (req, res) => {
   const { department, password } = req.body;
 
+ const results = await new Promise((resolve, reject) => {
   db.query(
     "SELECT department_password FROM departments WHERE department_name = ?",
     [department],
 
-    (err, results) => {
+    (err, result) => {
       if (err) {
+        reject(err);
         console.error("Error during login:", err);
-        return res.status(500).json({
+        return res.status(400).json({
           success: false,
           message: "An error occurred during login.",
         });
       }
-      if (results.length === 0) {
+      resolve(result);
+      console.log("Resolved")
+    }
+  )});
+      if(results.length === 0) {
         return res.status(401).json({
           success: false,
           message: "Invalid department or password.",
@@ -116,13 +128,14 @@ app.post("/login", (req, res) => {
       });
     }
   );
-});
+
+
 
 // Admin login endpoint
 app.post("/admin_login", (req, res) => {
   const { username, password } = req.body;
   // Retrieve the stored hash from the database
-  db.query(
+   db.query(
     "SELECT hashed_password FROM admin WHERE username = ?",
     [username],
     (err, results) => {
@@ -228,6 +241,17 @@ app.post("/update_department_password", (req, res) => {
     }
   );
 });
+
+app.get("/students" , (req , res)=>{
+  db.query("SELECT * FROM students" , (err , results)=>{
+    if(err){
+      console.log(err)
+    }
+    else{
+      res.send(results)
+    }
+  })
+})
 
 // Route to fetch students based on course, year, and semester
 app.get("/get_students", (req, res) => {

@@ -11,9 +11,40 @@ body {
     background: linear-gradient(135deg, #2a2a2a, #1a1a1a);  /* Dark gradient background */
     height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     color: #fff;
+}
+
+/* Navbar Styles */
+.navbar {
+    width: 100%;
+    background-color: #333;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #007bff;
 }
 
 /* Loading Page */
@@ -63,14 +94,9 @@ body {
     text-align: center;
 }
 
-/* Header for login card (includes logo) */
+/* Header for login card */
 .login-header {
     margin-bottom: 30px;
-}
-
-.logo {
-    width: 80px;
-    margin-bottom: 20px;
 }
 
 /* Heading for login form */
@@ -90,6 +116,7 @@ label {
     margin-bottom: 5px;
     display: block;
     color: #ccc;
+    font-weight: bold;
 }
 
 input {
@@ -172,5 +199,11 @@ input:focus {
     .login-btn {
         font-size: 16px;
         padding: 12px;
+    }
+    .nav-links {
+        gap: 15px;
+    }
+    .nav-links a {
+        font-size: 16px;
     }
 }

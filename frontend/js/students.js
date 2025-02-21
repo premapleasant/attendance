@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        fetch(`https://attendance-prema.onrender.com/get_students?course=${encodeURIComponent(course)}&year=${encodeURIComponent(year)}&semester=${encodeURIComponent(semester)}`, {
+        fetch(`https://aaasc-attendance.onrender.com/get_students?course=${encodeURIComponent(course)}&year=${encodeURIComponent(year)}&semester=${encodeURIComponent(semester)}`, {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const studentData = { name, course, year, semester };
         const method = selectedStudentId ? 'PUT' : 'POST';
-        const url = selectedStudentId ? `https://attendance-prema.onrender.com/update_student?id=${selectedStudentId}` : 'https://attendance-prema.onrender.com/add_student';
+        const url = selectedStudentId ? `https://aaasc-attendance.onrender.com/update_student?id=${selectedStudentId}` : 'https://aaasc-attendance.onrender.com/add_student';
 
         if (selectedStudentId) {
             studentData.id = selectedStudentId;
@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Delete student
     function deleteStudent(studentId) {
         if (confirm('Are you sure you want to delete this student?')) {
-            fetch(`https://attendance-prema.onrender.com/delete_student?id=${studentId}`, {
+            fetch(`https://aaasc-attendance.onrender.com/delete_student?id=${studentId}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${token}`

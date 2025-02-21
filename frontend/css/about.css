@@ -90,3 +90,53 @@ img {
         font-size: 1.5rem;
     }
 }
+/* Navbar Styles */
+.navbar {
+    width: 100%;
+    background-color: #333; /* Dark theme */
+    padding: 10px 0; /* Reduced height */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Navbar Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px; /* Slightly smaller */
+    font-weight: bold;
+    padding: 6px 12px; /* Reduced padding */
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+    text-shadow: 0 0 8px rgba(0, 123, 255, 0.8);
+}
+
+/* No layout change on mobile */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 15px;
+    }
+    .nav-links a {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+}

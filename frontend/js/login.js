@@ -1,3 +1,20 @@
+window.addEventListener("load", () => {
+    fetch("https://aaasc-attendance.onrender.com/api/health-check", {
+      method: "GET",
+      cache: "no-cache",
+    })
+      .then((response) => {
+        if (response.ok) {
+          console.log("Backend warmed up!");
+        } else {
+          console.error("Warm-up failed: ", response.statusText);
+        }
+      })
+      .catch((error) => {
+        console.error("Error warming up backend:", error);
+      });
+  });
+  
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.querySelector('.login-form');
     const departmentField = document.querySelector('#department');
@@ -37,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
         loadingPage.style.display = "flex";
 
         // Send request to the backend for verification
-        fetch('https://attendance-prema.onrender.com/login', {  // Assuming backend route is /login
+        fetch('https://aaasc-attendance.onrender.com/login', {  // Assuming backend route is /login
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
