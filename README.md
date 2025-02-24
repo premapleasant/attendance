@@ -68,5 +68,7 @@ A **mobile-friendly**, full-stack web application that empowers staff to manage 
 ---
 
 ## 🌐 Live Demo
+- **Department:** aaascbsccs
+- **Password:** 12345678
 
 [Live Link](https://aaasc-prema.netlify.app/)
